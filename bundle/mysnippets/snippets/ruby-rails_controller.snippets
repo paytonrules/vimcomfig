@@ -1,0 +1,82 @@
+# Actionpack controller
+
+snippet respond_to
+	respond_to do |wants|
+		wants.${1:html}${2}
+	end
+snippet wants
+	wants.${1:js|json|xml|html}${2}
+snippet flash
+	flash[:${1:notice}] = "${2}"
+snippet rest
+	def index
+	  @${1:things} = ${2:Thing}.find :all
+
+	  respond_to do |format|
+	    format.html # index.html.erb
+	    format.xml  { render :xml => @$1 }
+	  end
+	end
+
+	def show
+	  @${3:thing} = $2.find(params[:id])
+
+	  respond_to do |format|
+	    format.html # show.html.erb
+	    format.xml  { render :xml => @$3 }
+	  end
+	end
+
+	def new
+	  @$3 = $2.new
+
+	  respond_to do |format|
+	    format.html # new.html.erb
+	    format.xml  { render :xml => @$3 }
+	  end
+	end
+
+	def edit
+	  @$3 = $2.find(params[:id])
+	end
+
+	def create
+	  @$3 = $2.new(params[:$3])
+
+	  respond_to do |format|
+	    if @$3.save
+	      flash[:notice] = '$2 was successfully created.'
+	      format.html { redirect_to(@$3) }
+	      format.xml  { render :xml => @$3, :status => :created, :location => @$3 }
+	    else
+	      format.html { render :action => "new" }
+	      format.xml  { render :xml => @$3.errors, :status => :unprocessable_entity }
+	    end
+	  end
+	end
+
+	def update
+	  @$3 = $2.find(params[:id])
+
+	  respond_to do |format|
+	    if @$3.update_attributes(params[:$3])
+	      flash[:notice] = '$2 was successfully updated.'
+	      format.html { redirect_to(@$3) }
+	      format.xml  { head :ok }
+	    else
+	      format.html { render :action => "edit" }
+	      format.xml  { render :xml => @$3.errors, :status => :unprocessable_entity }
+	    end
+	  end
+	end
+
+	def destroy
+	  @$3 = $2.find(params[:id])
+	  @$3.destroy
+
+	  respond_to do |format|
+	    format.html { redirect_to(admin_$1_url) }
+	    format.xml  { head :ok }
+	  end
+	end
+
