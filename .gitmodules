@@ -16,3 +16,9 @@
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = http://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vim-rubytest"]
+	path = bundle/vim-rubytest
+	url = http://github.com/janx/vim-rubytest.git
