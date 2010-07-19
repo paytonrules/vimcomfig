@@ -25,3 +25,6 @@
 [submodule "bundle/vcscommand"]
 	path = bundle/vcscommand
 	url = git://repo.or.cz/vcscommand.git
+[submodule "bundle/vim-cucumber"]
+	path = bundle/vim-cucumber
+	url = http://github.com/tpope/vim-cucumber.git
