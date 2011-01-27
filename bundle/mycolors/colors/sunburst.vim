@@ -61,7 +61,6 @@ if has("gui_running")
   highlight rubyRailsUserClass guifg=#89BDFF guibg=Black gui=underline
   highlight railsConditionsSpecial guifg=#DAEFA0 guibg=Black
 
- 
 " Rails: erb
   highlight erubyDelimiter guifg=#FFFFFF guibg=Black
   highlight erubyRailsRenderMethod guifg=#DAD085 guibg=Black
