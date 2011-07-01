@@ -55,6 +55,7 @@ map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
 map <Leader>r <Plug>RubyTestRun 
 map <Leader>R <Plug>RubyFileRun
+map <Leader>rl <Plug>RubyTestRunLast
 
 " Edit or load .vimrc
 nmap <silent> ,ev :e $MYVIMRC<CR>
