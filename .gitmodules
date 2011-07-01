@@ -43,3 +43,6 @@
 [submodule "bundle/vim-markdown-preview"]
 	path = bundle/vim-markdown-preview
 	url = https://github.com/robgleeson/vim-markdown-preview.git
+[submodule "bundle/spec_vim"]
+	path = bundle/spec_vim
+	url = https://github.com/tomtom/spec_vim.git
