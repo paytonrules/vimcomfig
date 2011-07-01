@@ -1,10 +1,11 @@
 " F vi set nocompatible
-
+set nocompatible
 filetype on
 filetype plugin on
 filetype indent on
 
 syntax on
+
 
 set lazyredraw
 
@@ -46,16 +47,16 @@ set laststatus=2
 " add pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
 
-colorscheme wombat
-
 let g:CommandTMaxHeight=5
 let g:CommandTMatchWindowAtTop=1
 
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
-map <Leader>r <Plug>RubyTestRun 
+map <Leader>r <Plug>RubyTestRun
 map <Leader>R <Plug>RubyFileRun
 map <Leader>rl <Plug>RubyTestRunLast
+
+map <Leader>d :r !date<CR>
 
 " Edit or load .vimrc
 nmap <silent> ,ev :e $MYVIMRC<CR>
@@ -63,6 +64,9 @@ nmap <silent> ,sv :so $MYVIMRC<CR>
 
 " Replace tabs with spaces
 nmap <silent> ,rr :1,$retab<CR>
+
+" Format xml on the fly
+au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " Toggle paste mode (indent weirdness)
 nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
@@ -100,9 +104,20 @@ noremap <silent> ,mk <C-W>K
 noremap <silent> ,mh <C-W>H
 noremap <silent> ,mj <C-W>J
 
+
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
+
+autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
+autocmd BufNewFile,BufReadPost *.clj set filetype=clojure
+
 if has("gui_running")
- set fuoptions=maxvert,maxhorz
- au GUIEnter * set fullscreen
+  set fuoptions=maxvert,maxhorz
+  au GUIEnter * set fullscreen
 endif
+
+if has("gui_running")
+  colorscheme pyte
+else
+  colorscheme darkblue
+end
 
