@@ -58,6 +58,9 @@ map <Leader>rl <Plug>RubyTestRunLast
 
 map <Leader>d :r !date<CR>
 
+" recreate ctags
+map <Leader>ct :!/usr/local/bin/ctags -R .<CR>
+
 " Edit or load .vimrc
 nmap <silent> ,ev :e $MYVIMRC<CR>
 nmap <silent> ,sv :so $MYVIMRC<CR>
@@ -104,7 +107,6 @@ noremap <silent> ,mk <C-W>K
 noremap <silent> ,mh <C-W>H
 noremap <silent> ,mj <C-W>J
 
-
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
@@ -116,7 +118,7 @@ if has("gui_running")
 endif
 
 if has("gui_running")
-  colorscheme pyte
+  colorscheme synic
 else
   colorscheme darkblue
 end
