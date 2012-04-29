@@ -47,8 +47,9 @@ set laststatus=2
 " add pathogen managed plugins
 call pathogen#runtime_append_all_bundles()
 
-let g:CommandTMaxHeight=5
+let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
+let g:CommandTMaxFiles=40000
 
 map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
 
@@ -107,10 +108,15 @@ noremap <silent> ,mk <C-W>K
 noremap <silent> ,mh <C-W>H
 noremap <silent> ,mj <C-W>J
 
+" Tab navigation
+noremap <silent> ,] :tabnext<CR>
+noremap <silent> ,[ :tabprevious<CR>
+
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
 autocmd BufNewFile,BufReadPost *.clj set filetype=clojure
+autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown set linebreak wrap
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
@@ -120,6 +126,6 @@ endif
 if has("gui_running")
   colorscheme synic
 else
-  colorscheme darkblue
+  colorscheme fineblue
 end
 

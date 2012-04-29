@@ -16,9 +16,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = http://github.com/tpope/vim-fugitive.git
-[submodule "bundle/vim-rubytest"]
-	path = bundle/vim-rubytest
-	url = http://github.com/janx/vim-rubytest.git
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = git://github.com/msanders/snipmate.vim.git
@@ -52,9 +49,6 @@
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule "bundle/vim-coffee-script"]
-	path = bundle/vim-coffee-script
-	url = https://github.com/kchmck/vim-coffee-script.git
-[submodule "bundle/scala-vim-support"]
-	path = bundle/scala-vim-support
-	url = https://github.com/rosstimson/scala-vim-support.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
