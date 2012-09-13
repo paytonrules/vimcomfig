@@ -6,7 +6,6 @@ filetype indent on
 
 syntax on
 
-
 set lazyredraw
 
 " completion on the command line
@@ -15,7 +14,7 @@ set wildmenu
 " numbered lines
 set number
 set nohlsearch
-set paste
+set nopaste
 
 " word wrapping
 set wrap
