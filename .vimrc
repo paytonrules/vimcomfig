@@ -7,6 +7,7 @@ filetype indent on
 syntax on
 
 set lazyredraw
+set t_Co=256
 
 " completion on the command line
 set wildmenu
@@ -114,8 +115,9 @@ noremap <silent> ,[ :tabprevious<CR>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
-autocmd BufNewFile,BufReadPost *.clj set filetype=clojure
-autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown set linebreak wrap
+autocmd BufNewFile,BufReadPost *.clj,*.cljs set filetype=clojure
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
@@ -125,6 +127,6 @@ endif
 if has("gui_running")
   colorscheme synic
 else
-  colorscheme fineblue
+  colorscheme jellybeans
 end
 
