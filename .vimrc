@@ -118,6 +118,7 @@ autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
 autocmd BufNewFile,BufReadPost *.clj,*.cljs set filetype=clojure
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
+autocmd QuickFixCmdPost *grep* cwindow
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
