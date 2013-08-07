@@ -13,9 +13,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/edsono/vim-matchit.git
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "bundle/spec_vim"]
 	path = bundle/spec_vim
 	url = https://github.com/tomtom/spec_vim.git
