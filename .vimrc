@@ -53,8 +53,6 @@ noremap <Leader>d :r !date<CR>
 " recreate ctags
 noremap <Leader>ct :!/usr/local/bin/ctags -R .<CR>
 
-" In insert mode convert the current word to uppercase
-
 " Edit or load .vimrc
 noremap <silent> ,ev :e $MYVIMRC<CR>
 noremap <silent> ,sv :so $MYVIMRC<CR>
@@ -73,9 +71,6 @@ nnoremap <silent> ,w :set wrap!<CR>:set wrap?<CR>
 
 " cd to directory of the current file
 noremap <silent> ,cd :lcd %:h<CR>
-
-set grepprg=ack
-set grepformat=%f:%l:%m
 
 " Move the cursor to the window in the proper direction
 noremap <silent> ,h :wincmd h<cr>
@@ -115,8 +110,4 @@ if has("gui_running")
   au GUIEnter * set fullscreen
 endif
 
-if has("gui_running")
-  colorscheme synic
-else
-  colorscheme jellybeans
-end
+colorscheme jellybeans
