@@ -57,14 +57,11 @@ map <Leader>ct :!/usr/local/bin/ctags -R .<CR>
 nmap <silent> ,ev :e $MYVIMRC<CR>
 nmap <silent> ,sv :so $MYVIMRC<CR>
 
-" Replace tabs with spaces
-nmap <silent> ,rr :1,$retab<CR>
-
 " Format xml on the fly
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 
 " Toggle paste mode (indent weirdness)
-nmap <silent> ,p :set invpaste<CR>:set paste?<CR>
+nnoremap <silent> ,p :set paste!<CR>:set paste?<CR>
 
 " Toggle highlighted search
 nmap <silent> ,n :set invhls<CR>:set hls?<CR>
