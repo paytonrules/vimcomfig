@@ -17,9 +17,6 @@ set number
 set nohlsearch
 set nopaste
 
-" word wrapping
-set wrap
-
 " no beeps
 set vb
 
@@ -130,4 +127,3 @@ if has("gui_running")
 else
   colorscheme jellybeans
 end
-
