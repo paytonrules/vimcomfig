@@ -48,12 +48,6 @@ let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
 let g:CommandTMaxFiles=40000
 
-map <leader>d :execute 'NERDTreeToggle ' . getcwd()<CR>
-
-map <Leader>r <Plug>RubyTestRun
-map <Leader>R <Plug>RubyFileRun
-map <Leader>rl <Plug>RubyTestRunLast
-
 map <Leader>d :r !date<CR>
 
 " recreate ctags
