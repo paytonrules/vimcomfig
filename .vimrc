@@ -48,14 +48,16 @@ let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
 let g:CommandTMaxFiles=40000
 
-map <Leader>d :r !date<CR>
+noremap <Leader>d :r !date<CR>
 
 " recreate ctags
-map <Leader>ct :!/usr/local/bin/ctags -R .<CR>
+noremap <Leader>ct :!/usr/local/bin/ctags -R .<CR>
+
+" In insert mode convert the current word to uppercase
 
 " Edit or load .vimrc
-nmap <silent> ,ev :e $MYVIMRC<CR>
-nmap <silent> ,sv :so $MYVIMRC<CR>
+noremap <silent> ,ev :e $MYVIMRC<CR>
+noremap <silent> ,sv :so $MYVIMRC<CR>
 
 " Format xml on the fly
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
@@ -64,13 +66,13 @@ au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
 nnoremap <silent> ,p :set paste!<CR>:set paste?<CR>
 
 " Toggle highlighted search
-nmap <silent> ,n :set invhls<CR>:set hls?<CR>
+nnoremap <silent> ,n :set hls!<CR>:set hls?<CR>
 
 " Toggle word wrapping
-nmap <silent> ,w :set invwrap<CR>:set wrap?<CR>
+nnoremap <silent> ,w :set wrap!<CR>:set wrap?<CR>
 
 " cd to directory of the current file
-nmap <silent> ,cd :lcd %:h<CR>
+noremap <silent> ,cd :lcd %:h<CR>
 
 set grepprg=ack
 set grepformat=%f:%l:%m
