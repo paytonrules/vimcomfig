@@ -44,10 +44,6 @@ set laststatus=2
 " add pathogen managed plugins
 call pathogen#incubate()
 
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
-let g:CommandTMaxFiles=40000
-
 noremap <Leader>d :r !date<CR>
 
 " recreate ctags
@@ -96,6 +92,8 @@ noremap <silent> ,mj <C-W>J
 " Tab navigation
 noremap <silent> ,] :tabnext<CR>
 noremap <silent> ,[ :tabprevious<CR>
+
+noremap <silent> ,t :CtrlP<CR>
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
