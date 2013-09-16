@@ -98,7 +98,7 @@ noremap <silent> ,t :CtrlP<CR>
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
-autocmd BufNewFile,BufReadPost *.clj,*.cljs set filetype=clojure
+autocmd BufNewFile,BufReadPost *.clj,*.cljs,*.hiccup set filetype=clojure
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
 autocmd QuickFixCmdPost *grep* cwindow
