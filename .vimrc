@@ -42,7 +42,7 @@ set statusline=%F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [ASCII=\%03.3b]\ [Format=
 set laststatus=2
 
 " add pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 
 let g:CommandTMaxHeight=10
 let g:CommandTMatchWindowAtTop=1
