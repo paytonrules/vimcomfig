@@ -1,6 +1,3 @@
-[submodule "bundle/Command-T"]
-	path = bundle/Command-T
-	url = git://github.com/akitaonrails/Command-T.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
@@ -13,9 +10,6 @@
 [submodule "bundle/matchit"]
 	path = bundle/matchit
 	url = https://github.com/edsono/vim-matchit.git
-[submodule "bundle/vim-markdown-preview"]
-	path = bundle/vim-markdown-preview
-	url = https://github.com/peterhost/vim-markdown-preview
 [submodule "bundle/Color-Sampler-Pack"]
 	path = bundle/Color-Sampler-Pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
@@ -28,24 +22,22 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/clang_complete"]
-	path = bundle/clang_complete
-	url = git@github.com:Rip-Rip/clang_complete.git
+[submodule "bundle/vim-fireplace.git"]
+	path = bundle/vim-fireplace.git
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-classpath.git"]
+	path = bundle/vim-classpath.git
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/vim-clojure-static.git"]
+	path = bundle/vim-clojure-static.git
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
+[submodule "bundle/cooca.vim"]
+	path = bundle/cooca.vim
+  url = git@github.com:msanders/cocoa.vim.git
 [submodule "bundle/vim-ios"]
 	path = bundle/vim-ios
 	url = git@github.com:eraserhd/vim-ios.git
-[submodule "bundle/cocoa.vim"]
-	path = bundle/cocoa.vim
-	url = git@github.com:msanders/cocoa.vim.git
-[submodule "bundle/vim-fireplace"]
-	path = bundle/vim-fireplace
-	url = git://github.com/tpope/vim-fireplace.git
-[submodule "bundle/vim-classpath"]
-	path = bundle/vim-classpath
-	url = git://github.com/tpope/vim-classpath.git
-[submodule "bundle/vim-clojure-static"]
-	path = bundle/vim-clojure-static
-	url = git://github.com/guns/vim-clojure-static.git
-[submodule "bundle/cooca.vim"]
-	path = bundle/cooca.vim
-	url = git@github.com:msanders/cocoa.vim.git
+

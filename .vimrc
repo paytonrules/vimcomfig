@@ -46,11 +46,7 @@ set statusline=%F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [ASCII=\%03.3b]\ [Format=
 set laststatus=2
 
 " add pathogen managed plugins
-call pathogen#runtime_append_all_bundles()
-
-let g:CommandTMaxHeight=10
-let g:CommandTMatchWindowAtTop=1
-let g:CommandTMaxFiles=40000
+call pathogen#incubate()
 
 noremap <Leader>d :r !date<CR>
 iabbrev @@ esmith@8thlight.com
@@ -104,6 +100,8 @@ noremap <silent> ,mj <C-W>J
 noremap <silent> ,] :tabnext<CR>
 noremap <silent> ,[ :tabprevious<CR>
 
+noremap <silent> ,t :CtrlP<CR>
+
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
 autocmd FileType clojure setlocal lispwords+=describe,it,context,around
@@ -112,6 +110,10 @@ autocmd FileType clojure setlocal wildignore+=target/**/*
 au BufNewFile,BufRead *.hiccup set filetype=clojure
 au BufNewFile,BufRead *.cljs set filetype=clojure
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
+<<<<<<< HEAD
+=======
+autocmd BufNewFile,BufReadPost *.clj,*.cljs,*.hiccup set filetype=clojure
+>>>>>>> 7f9b4b730a3ee2a5163edb013663d7a390daecaa
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
 autocmd BufNewFile,BufReadPost *.ejs set filetype=html
