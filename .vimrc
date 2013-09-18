@@ -1,3 +1,7 @@
+filetype off
+filetype plugin indent off
+set runtimepath+=/usr/local/go/misc/vim
+
 " F vi set nocompatible
 set nocompatible
 filetype on
@@ -49,12 +53,15 @@ let g:CommandTMatchWindowAtTop=1
 let g:CommandTMaxFiles=40000
 
 noremap <Leader>d :r !date<CR>
+iabbrev @@ esmith@8thlight.com
+iabbrev ww www.paytonrules.com
+iabbrev quesiton question
 
 " recreate ctags
 noremap <Leader>ct :!/usr/local/bin/ctags -R .<CR>
 
 " Edit or load .vimrc
-noremap <silent> ,ev :e $MYVIMRC<CR>
+noremap <silent> ,ev :vsplit $MYVIMRC<CR>
 noremap <silent> ,sv :so $MYVIMRC<CR>
 
 " Format xml on the fly
@@ -99,10 +106,15 @@ noremap <silent> ,[ :tabprevious<CR>
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
 
+autocmd FileType clojure setlocal lispwords+=describe,it,context,around
+autocmd FileType clojure setlocal wildignore+=target/**/*
+
+au BufNewFile,BufRead *.hiccup set filetype=clojure
+au BufNewFile,BufRead *.cljs set filetype=clojure
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
-autocmd BufNewFile,BufReadPost *.clj,*.cljs set filetype=clojure
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
+autocmd BufNewFile,BufReadPost *.ejs set filetype=html
 autocmd QuickFixCmdPost *grep* cwindow
 
 if has("gui_running")

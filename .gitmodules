@@ -22,9 +22,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "bundle/VimClojure"]
-	path = bundle/VimClojure
-	url = https://github.com/vim-scripts/VimClojure.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/tpope/vim-markdown.git
@@ -39,4 +36,16 @@
 	url = git@github.com:eraserhd/vim-ios.git
 [submodule "bundle/cocoa.vim"]
 	path = bundle/cocoa.vim
+	url = git@github.com:msanders/cocoa.vim.git
+[submodule "bundle/vim-fireplace"]
+	path = bundle/vim-fireplace
+	url = git://github.com/tpope/vim-fireplace.git
+[submodule "bundle/vim-classpath"]
+	path = bundle/vim-classpath
+	url = git://github.com/tpope/vim-classpath.git
+[submodule "bundle/vim-clojure-static"]
+	path = bundle/vim-clojure-static
+	url = git://github.com/guns/vim-clojure-static.git
+[submodule "bundle/cooca.vim"]
+	path = bundle/cooca.vim
 	url = git@github.com:msanders/cocoa.vim.git
