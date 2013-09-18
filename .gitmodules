@@ -38,3 +38,6 @@
 	path = bundle/vim-ios
 	url = git@github.com:eraserhd/vim-ios.git
 
+[submodule "bundle/vim-classpath.git"]
+	path = bundle/vim-classpath.git
+	url = git@github.com:tpope/vim-classpath.git
