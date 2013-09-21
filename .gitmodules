@@ -22,28 +22,12 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/vim-fireplace.git"]
-	path = bundle/vim-fireplace.git
-	url = git://github.com/tpope/vim-fireplace.git
-[submodule "bundle/vim-clojure-static.git"]
-	path = bundle/vim-clojure-static.git
-	url = git://github.com/guns/vim-clojure-static.git
-[submodule "bundle/rainbow_parentheses"]
-	path = bundle/rainbow_parentheses
-	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule "bundle/cooca.vim"]
 	path = bundle/cooca.vim
   url = git@github.com:msanders/cocoa.vim.git
-[submodule "bundle/vim-ios"]
-	path = bundle/vim-ios
-	url = git@github.com:eraserhd/vim-ios.git
-
 [submodule "bundle/vim-classpath.git"]
 	path = bundle/vim-classpath.git
 	url = git@github.com:tpope/vim-classpath.git
-[submodule "vim-clojure-static"]
-	path = vim-clojure-static
-	url = git@github.com:guns/vim-clojure-static.git
-[submodule "vim-fireplace"]
-	path = vim-fireplace
-	url = git@github.com:tpope/vim-fireplace.git
+[submodule "bundle/rainbow_parentheses"]
+	path = bundle/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim.git
