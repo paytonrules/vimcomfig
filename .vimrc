@@ -108,7 +108,6 @@ noremap <silent> ,b :!xctool<CR>
 noremap <silent> ,ms :mksession! session.vim<CR>
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
-let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 autocmd FileType clojure setlocal lispwords+=describe,it,context,around
 autocmd FileType clojure setlocal wildignore+=target/**/*
