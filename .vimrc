@@ -102,7 +102,13 @@ noremap <silent> ,[ :tabprevious<CR>
 
 noremap <silent> ,t :CtrlP<CR>
 
+" XCode build
+noremap <silent> ,b :!xctool<CR>
+
+noremap <silent> ,ms :mksession! session.vim<CR>
+
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
+let g:clang_library_path = '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib'
 
 autocmd FileType clojure setlocal lispwords+=describe,it,context,around
 autocmd FileType clojure setlocal wildignore+=target/**/*
@@ -112,7 +118,9 @@ autocmd BufNewFile,BufReadPost *.clj,*.cljs,*.hiccup set filetype=clojure
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
 autocmd BufNewFile,BufReadPost *.ejs set filetype=html
+autocmd BufNewFile,BufReadPost *.coffee set filetype=coffee
 autocmd QuickFixCmdPost *grep* cwindow
+autocmd BufWritePre * :%s/\s\+$//e
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
