@@ -22,9 +22,6 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git://github.com/kien/ctrlp.vim.git
-[submodule "bundle/cooca.vim"]
-	path = bundle/cooca.vim
-  url = git@github.com:msanders/cocoa.vim.git
 [submodule "bundle/vim-classpath.git"]
 	path = bundle/vim-classpath.git
 	url = git@github.com:tpope/vim-classpath.git
@@ -37,12 +34,6 @@
 [submodule "bundle/vim-clojure-static.git"]
 	path = bundle/vim-clojure-static.git
 	url = git@github.com:guns/vim-clojure-static.git
-[submodule "bundle/vim-ios.git"]
-	path = bundle/vim-ios.git
-	url = git@github.com:eraserhd/vim-ios.git
-[submodule "bundle/clang_complete.git"]
-	path = bundle/clang_complete.git
-	url = git@github.com:Rip-Rip/clang_complete.git
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
