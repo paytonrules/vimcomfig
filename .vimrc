@@ -1,5 +1,5 @@
 filetype off
-filetype plugin indent off
+filetype plugin indent on
 set runtimepath+=/usr/local/go/misc/vim
 
 " F vi set nocompatible
@@ -12,6 +12,8 @@ syntax on
 
 set lazyredraw
 set t_Co=256
+set exrc
+set secure
 
 " completion on the command line
 set wildmenu
@@ -107,19 +109,22 @@ noremap <silent> ,b :!xctool<CR>
 
 noremap <silent> ,ms :mksession! session.vim<CR>
 
-let NERDTreeIgnore=['\.vim$', '\~$', '\.o$', '\.d$']
+let NERDTreeIgnore=['\.vim$', '\~$', '\.o$']
 
 autocmd FileType clojure setlocal lispwords+=describe,it,context,around
 autocmd FileType clojure setlocal wildignore+=target/**/*
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
-autocmd BufNewFile,BufReadPost *.clj,*.cljs,*.hiccup set filetype=clojure
+autocmd BufNewFile,BufReadPost *.clj,*.cljs,*.hiccup,*.cljx set filetype=clojure
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.html,*.textile,*.markdown,*.md set linebreak wrap
 autocmd BufNewFile,BufReadPost *.ejs set filetype=html
 autocmd BufNewFile,BufReadPost *.coffee set filetype=coffee
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd BufWritePre * :%s/\s\+$//e
+
+let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
 
 if has("gui_running")
   set fuoptions=maxvert,maxhorz
