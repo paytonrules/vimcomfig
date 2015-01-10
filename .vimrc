@@ -1,12 +1,9 @@
-filetype off
-filetype plugin indent on
-set runtimepath+=/usr/local/go/misc/vim
+" add pathogen managed plugins
+call pathogen#incubate()
 
 " F vi set nocompatible
 set nocompatible
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
 
 syntax on
 
@@ -47,9 +44,6 @@ set nowrap
 set statusline=%F%m%r%h%w\ [Line=%03l,Col=%03v][%p%%]\ [ASCII=\%03.3b]\ [Format=%{&ff}]\ [Type=%y]
 set laststatus=2
 
-" add pathogen managed plugins
-call pathogen#incubate()
-
 noremap <Leader>d :r !date<CR>
 iabbrev @@ esmith@8thlight.com
 iabbrev ww www.paytonrules.com
@@ -61,6 +55,9 @@ noremap <Leader>ct :!/usr/local/bin/ctags -R .<CR>
 " Edit or load .vimrc
 noremap <silent> ,ev :vsplit $MYVIMRC<CR>
 noremap <silent> ,sv :so $MYVIMRC<CR>
+
+" Edit todo list
+noremap <silent> ,d :vsplit ~/Dropbox/todolist/todos.otl<CR>
 
 " Format xml on the fly
 au FileType xml exe ":silent 1,$!xmllint --format --recover - 2>/dev/null"
@@ -111,7 +108,7 @@ noremap <silent> ,ms :mksession! session.vim<CR>
 
 let NERDTreeIgnore=['\.vim$', '\~$', '\.o$']
 
-autocmd FileType clojure setlocal lispwords+=describe,it,context,around
+autocmd FileType clojure setlocal lispwords+=describe,it,context,around,should-invoke,should-not-invoke
 autocmd FileType clojure setlocal wildignore+=target/**/*
 
 autocmd BufNewFile,BufReadPost *.feature,*.story set filetype=cucumber
