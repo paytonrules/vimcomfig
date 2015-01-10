@@ -7,9 +7,6 @@
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = http://github.com/tpope/vim-fugitive.git
-[submodule "bundle/matchit"]
-	path = bundle/matchit
-	url = https://github.com/edsono/vim-matchit.git
 [submodule "bundle/Color-Sampler-Pack"]
 	path = bundle/Color-Sampler-Pack
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
