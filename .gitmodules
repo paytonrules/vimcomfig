@@ -22,9 +22,6 @@
 [submodule "bundle/vim-classpath.git"]
 	path = bundle/vim-classpath.git
 	url = git@github.com:tpope/vim-classpath.git
-[submodule "bundle/rainbow_parentheses"]
-	path = bundle/rainbow_parentheses
-	url = https://github.com/kien/rainbow_parentheses.vim.git
 [submodule "bundle/vim-fireplace.git"]
 	path = bundle/vim-fireplace.git
 	url = git@github.com:tpope/vim-fireplace.git
