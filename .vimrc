@@ -1,10 +1,10 @@
 " add pathogen managed plugins
-call pathogen#incubate()
+execute pathogen#infect()
+call pathogen#helptags() " generate helptags for everything in 'runtimepath'
 
 " F vi set nocompatible
 set nocompatible
 filetype plugin indent on
-
 syntax on
 
 set lazyredraw
